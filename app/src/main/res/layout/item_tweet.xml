@@ -24,18 +24,21 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="0dp"
         android:layout_toEndOf="@+id/ivProfileImage"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
         tools:text="rnjohnson18" />
 
     <TextView
         android:id="@+id/tvBody"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:autoLink="all"
-        android:linksClickable="true"
         android:layout_below="@+id/tvScreenName"
         android:layout_marginStart="10dp"
         android:layout_marginTop="2dp"
         android:layout_toEndOf="@+id/ivProfileImage"
+        android:autoLink="all"
+        android:linksClickable="true"
+        android:textColor="@android:color/black"
         tools:text="This is a sample tweet!" />
 
     <TextView
