@@ -2,7 +2,7 @@
 
 SimpleTweet is an android app that allows a user to view their Twitter timeline. The app utilizes [Twitter REST API](https://dev.twitter.com/rest/public).
 
-Time spent: 3 hours spent in total
+Time spent: 5 hours spent in total
 
 ## User Stories
 
@@ -23,7 +23,7 @@ The following **optional** features are implemented:
 - [ ] User can see embedded image media within the tweet detail view
 - [ ] User can watch embedded video within the tweet
 - [ ] User can open the twitter app offline and see last loaded tweets
-- [ ] On the Twitter timeline, leverage the CoordinatorLayout to apply scrolling behavior that hides / shows the toolbar.
+- [x] On the Twitter timeline, leverage the CoordinatorLayout to apply scrolling behavior that hides / shows the toolbar.
 
 The following **additional** features are implemented:
 
@@ -42,6 +42,8 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 Ran into an error using my own Twitter API keys for some reason ("Error code 415: Callback URL not approved for this client application."), so I just ended up using the CodePath provided ones.
 
 Also had an issue with making Android Studio recognize 'Tweet.java' as a Java class after I accidentally created it with a typo. Even after deleting the file & restarting the program several times, Android Studio wouldn't let me create a new file named Tweet with the error  "Unable to parse template "Class" Error message: Selected class file name 'Tweet.java' mapped to not java file type 'Auto-detect file type by content.' " I was able to resolve this by creating a file named something else, then renaming it 'Tweet', then going into a dialog accessible from the right-click menu that allowed me append '.java' to the file name and tell Android Studio to parse the file as a Java class.
+
+Spent way too long trying to figure out how to get the account names, user names, and timestamps to wrap while also not overlapping each other; I ended up putting them into a LinearLayout within the RelativeLayout
 
 ## Open-source libraries used
 

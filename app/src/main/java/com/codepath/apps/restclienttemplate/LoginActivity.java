@@ -11,7 +11,7 @@ import com.codepath.apps.restclienttemplate.models.SampleModel;
 import com.codepath.apps.restclienttemplate.models.SampleModelDao;
 import com.codepath.oauth.OAuthLoginActionBarActivity;
 
-import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.widget.Toolbar;
 
 public class LoginActivity extends OAuthLoginActionBarActivity<TwitterClient> {
 
@@ -22,9 +22,16 @@ public class LoginActivity extends OAuthLoginActionBarActivity<TwitterClient> {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_login);
 
-		// in Activity#onCreate
-		getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-		getSupportActionBar().setCustomView(R.layout.actionbar_title);
+		// Find the toolbar view inside the activity layout
+		Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+		// Sets the Toolbar to act as the ActionBar for this Activity window.
+		// Make sure the toolbar exists in the activity and is not null
+		setSupportActionBar(toolbar);
+
+		/*// Display icon in the toolbar
+		getSupportActionBar().setDisplayShowHomeEnabled(true);
+		getSupportActionBar().setLogo(R.drawable.ic_logo_white);
+		getSupportActionBar().setDisplayUseLogoEnabled(true);*/
 
 		final SampleModel sampleModel = new SampleModel();
 		sampleModel.setName("CodePath");
@@ -41,6 +48,7 @@ public class LoginActivity extends OAuthLoginActionBarActivity<TwitterClient> {
 
 
 	// Inflate the menu; this adds items to the action bar if it is present.
+	// Menu icons are inflated just as they were with actionbar (https://guides.codepath.org/android/Using-the-App-Toolbar)
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		getMenuInflater().inflate(R.menu.login, menu);
