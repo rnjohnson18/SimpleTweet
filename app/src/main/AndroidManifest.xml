@@ -14,10 +14,12 @@
         android:label="@string/app_name"
         android:theme="@style/TwitterAppTheme">
         <activity
-            android:name=".TimelineActivity"
+            android:name=".ComposeActivity"
             android:exported="true" />
         <activity
-            android:name=".LoginActivity">
+            android:name=".TimelineActivity"
+            android:exported="true" />
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -26,12 +26,7 @@ public class LoginActivity extends OAuthLoginActionBarActivity<TwitterClient> {
 		Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 		// Sets the Toolbar to act as the ActionBar for this Activity window.
 		// Make sure the toolbar exists in the activity and is not null
-		setSupportActionBar(toolbar);
-
-		/*// Display icon in the toolbar
-		getSupportActionBar().setDisplayShowHomeEnabled(true);
-		getSupportActionBar().setLogo(R.drawable.ic_logo_white);
-		getSupportActionBar().setDisplayUseLogoEnabled(true);*/
+		setSupportActionBar(toolbar); // <-- makes Java error out now for some reason (10/8/21)
 
 		final SampleModel sampleModel = new SampleModel();
 		sampleModel.setName("CodePath");
@@ -46,12 +41,11 @@ public class LoginActivity extends OAuthLoginActionBarActivity<TwitterClient> {
 		});
 	}
 
-
 	// Inflate the menu; this adds items to the action bar if it is present.
 	// Menu icons are inflated just as they were with actionbar (https://guides.codepath.org/android/Using-the-App-Toolbar)
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.login, menu);
+		getMenuInflater().inflate(R.menu.menu_login, menu);
 		return true;
 	}
 
@@ -59,7 +53,7 @@ public class LoginActivity extends OAuthLoginActionBarActivity<TwitterClient> {
 	// i.e Display application "homepage"
 	@Override
 	public void onLoginSuccess() {
-		Log.i("rkgkfk","Login success");
+		Log.i("onLoginSuccess","Login success");
 		Intent i = new Intent(this, TimelineActivity.class);
 		startActivity(i);
 	}

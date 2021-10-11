@@ -11,19 +11,24 @@
     <!-- Application theme. -->
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
 
     <style name="TwitterAppTheme" parent="AppTheme">
         <item name="colorPrimary">@color/twitter_blue</item>
         <item name="colorPrimaryDark">@color/twitter_blue_fill_pressed</item>
         <item name="colorAccent">@color/twitter_blue</item>
+        <item name="actionMenuTextAppearance">@style/TwitterToolbar</item>
     </style>
 
-    <style name="TwitterToolbar" parent="@style/ThemeOverlay.AppCompat.Light">
+    <style name="TwitterToolbar" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
         <!-- android:textColorPrimary is the color of the title text in the Toolbar  -->
+        <item name="colorOnPrimary">@android:color/white</item>
         <item name="android:textColorPrimary">@android:color/white</item>
         <!-- actionMenuTextColor is the color of the text of action (menu) items  -->
         <item name="actionMenuTextColor">@android:color/white</item>
+        <item name="android:actionMenuTextColor">@android:color/white</item>
         <!-- Tints the input fields like checkboxes and text fields -->
         <item name="colorAccent">@color/twitter_blue_50</item>
         <!-- Applies to views in their normal state. -->

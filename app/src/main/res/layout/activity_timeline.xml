@@ -17,28 +17,9 @@
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
 
         <!-- Toolbar is the actual app bar with text and the action items -->
-        <androidx.appcompat.widget.Toolbar
+        <include
             android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/twitter_blue"
-            android:minHeight="?attr/actionBarSize"
-            android:theme="@style/TwitterToolbar"
-            app:layout_scrollFlags="scroll|enterAlways"
-            app:contentInsetLeft="0dp"
-            app:contentInsetStart="0dp">
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <ImageView
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
-                    android:layout_gravity="center_horizontal"
-                    android:src="@drawable/ic_logo_white" />
-            </FrameLayout>
-        </androidx.appcompat.widget.Toolbar>
+            layout="@layout/toolbar" />
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
